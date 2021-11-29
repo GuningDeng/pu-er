@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 const PuerhsPage = ({
     data: {
@@ -15,7 +15,12 @@ const PuerhsPage = ({
             {
                 edges.map((item) => {
                     const puerh = item.node.puerhMeta
-                    return <p key={item.node.id}>{puerh.name}.</p>
+                    const slug = item.node.slug
+                    return (
+                        <Link to={`/puerhs/${slug}`}>
+                            <p key={item.node.id}>{puerh.name}.</p>
+                        </Link>
+                    )
                 })
             }
 
@@ -29,6 +34,7 @@ export const query = graphql`
             edges {
               node {
                 id
+                slug
                 puerhMeta {
                   name
                 }
