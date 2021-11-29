@@ -21,13 +21,39 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1080px;
+    width: 100%;
+    /* max-width: 1080px; */
     margin: auto;
+}
+
+/* header */
+.siteTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.siteTitle::after {
+    content:'.';
+    position: absolute;
+    right: -5px;
+    bottom: 35px;
+    font-size: 2rem;
+    font-family: serif;
+    color: #37BA83;
+    margin-right: auto;
 }
 
 .nav {
     display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .navLinks {
