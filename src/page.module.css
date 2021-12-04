@@ -1,4 +1,103 @@
-.imageLocal {
-    width: 800px;
-    height: auto;
+/* ------- homepage header -------- */
+.headerPictureH1 {
+    position: relative;
+}
+
+.headerTitle {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headerTitle >h1 {
+    font-size: 5.3rem;
+    text-shadow: 
+    0 0 9px #000, 
+    0 0 17px #000, 
+    0 0 25px #000,
+    0 0 33px #000;
+}
+
+.headerPicture {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.headerDescription {
+    padding: 85px 15%;
+    line-height: 2;
+    /* text-align: center; */
+    color: #e2e2e2;
+}
+
+.headerDescriptionBtn {
+    padding: 0 30%;
+    text-align: center;
+    margin-top: 85px;
+}
+
+.CTA {
+    display: block;
+    padding: 10px 20px;
+    /* margin-right: auto; */
+    background-color: #5c1311;
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 50px,
+    rgba(255, 127, 0, 0.09) 50px, rgba(255, 127, 0, 0.09) 56px, transparent 56px, transparent 63px,
+    rgba(255, 127, 0, 0.09) 63px, rgba(255, 127, 0, 0.09) 69px, transparent 69px, transparent 116px,
+    rgba(255, 206, 0, 0.09) 116px, rgba(255, 206, 0, 0.09) 166px),
+repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.09) 50px,
+    rgba(255, 127, 0, 0.09) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.09) 63px,
+    rgba(255, 127, 0, 0.09) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.09) 116px,
+    rgba(255, 206, 0, 0.09) 166px),
+repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.09) 5px,
+    rgba(143, 77, 63, 0.09) 10px),
+repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.09) 5px,
+    rgba(143, 77, 63, 0.09) 10px);
+    border-top: 2px solid #791211;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+  
+.CTA:hover {
+    color: #d32a28;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #d32a28;
+    font-weight: normal;
+}
+
+/*------------- home page featured PuErhs --------------*/
+.section {
+    position: relative;
+    margin-top: 85px;
+    padding: 0 15%;
+    text-align: center;
+}
+
+.subtitle {
+    margin-bottom: 35px;
+    font-size: 3.7rem;
+    line-height: 2.9rem;
+    /* letter-spacing:  -0.35rem; */
+    text-transform: uppercase;
+    color: #e2e2e2;
+}
+
+.description {
+    padding: 0 9%;
+    line-height: 2;
+    font-weight: 500;
+}
+
+.puErhs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 105px;
 }
