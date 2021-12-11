@@ -56,7 +56,8 @@ const IndexPage = ({
         <div className={puErhs}>
           {
             homePage.featuredPuErhs.puErhs.map(puErh => (
-              <Puerh key={puErh.id} slug={`puErhs/${puErh.slug}`} puErh={puErh} />
+              <Puerh key={puErh.id} slug={`puerhs/${puErh.slug}`} puErh={puErh} />
+              
             ))
           }
           

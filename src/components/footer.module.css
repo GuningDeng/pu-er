@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     margin-top: 165px;
     padding: 2.5rem 0;
-    color: #b18768;
+    color: #ccaa92;
     background-color: #3e0605;
     background-image: repeating-linear-gradient(90deg, transparent, transparent 50px,
     rgba(255, 127, 0, 0.05) 50px, rgba(255, 127, 0, 0.05) 56px, transparent 56px, transparent 63px,
@@ -37,7 +37,7 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     /* text-align: center; */
     text-transform: uppercase;
     font-weight: bold;
-    color: #ce9f7c;
+    color: #ecd8c9;
 }
 
 .socials {
@@ -53,11 +53,12 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     margin-left: 1.1rem;
     background-size: 30px 30px;
     transition: transform .3 ease;
+    opacity: 1;
 }
 
 .facebook:hover,
 .linkedin:hover {
-    transform: rotate3d(0, 1, 0, 30deg);
+    opacity: .55;
 }
 
 

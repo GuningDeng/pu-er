@@ -83,7 +83,7 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
 .subtitle {
     margin-bottom: 35px;
     font-size: 3.7rem;
-    line-height: 2.9rem;
+    line-height: 3.9rem;
     /* letter-spacing:  -0.35rem; */
     text-transform: uppercase;
     color: #e2e2e2;
@@ -101,3 +101,42 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     flex-wrap: wrap;
     margin-top: 105px;
 }
+
+/* ---------- pu erhs page------- */
+.puerthsTitleH2 {
+    margin-top: 85px;
+    text-align: center;
+}
+
+/* ----------- puerh page ----------- */
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3vw 9vw;
+}
+
+.puerhHeaderPicture {
+    max-width: 35vw;
+    min-width: 330px;
+    max-height: 35vw;
+    min-height: 330px;
+    overflow: hidden;
+
+}
+
+.puerhHeaderInfo {
+    max-width: 35vw;
+    min-width: 330px;
+    max-height: 35vw;
+    min-height: 330px;
+    overflow: hidden;
+}
+
+.puerhName {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #37ba83;
+}
+
+
