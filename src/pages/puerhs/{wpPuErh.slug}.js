@@ -7,6 +7,11 @@ import {
     header,
     puerhHeaderPicture,
     puerhHeaderInfo,
+    puerhDescription,
+    puerhPictures,
+    puerhPicture,
+    puerhDetails,
+    puerhDetail,
     headerPictureH1,
     headerPicture,
     headerTitle,
@@ -31,9 +36,12 @@ const PuerhPage = ({
     }
 }) => {
     const image = getImage(puerh.profilePicture.localFile)
+    const image1 = getImage(puerh.pictures.picture1.localFile)
+    const image2 = getImage(puerh.pictures.picture2.localFile)
+    const image3 = getImage(puerh.pictures.picture3.localFile)
 
     return (
-        <Layout pageTitle="Pu Erhs Template">
+        <Layout pageTitle="Pu Erh Template">
             <div className={header}>
                 <div >
                     <GatsbyImage
@@ -55,50 +63,67 @@ const PuerhPage = ({
                         {puerh.name}
                     </h1>
                     <p>
-                        <span>Prijs:</span> {puerh.price}
+                        <span>Prijs:</span> <strong> {puerh.price}</strong>
                     </p>
+                    <br></br>
                     <p>
-                        <span>Gewicht:</span> {puerh.weight}
+                        <span>Gewicht:</span> <strong>{puerh.weight}</strong>
                     </p>
-                    <div dangerouslySetInnerHTML={{ __html: puerh.description }} />
-                    <p>
-                        <span>Inweektijd:</span> {puerh.steepingTime}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.steepingTemperature}
-                    </p>
-                    <p>
-                        <span>Bladeren Per 500ml 17oz Theepot:</span> {puerh.leavesPer500ml17ozTeapot}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.tablespoons500ml17Oz}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.harvestYear}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.teaSeason}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.teaRegion}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.teaCaffeineContent}
-                    </p>
-                    <p>
-                        <span>Weektemperatuur:</span> {puerh.glutenFree}
-                    </p>
+                    <div
+                        className={puerhDescription}
+                        dangerouslySetInnerHTML={{ __html: puerh.description }}
+                    />
+
                 </div>
             </div>
-            {/* <div>
-                <GatsbyImage 
-                    image={image}
-                    alt={puerh.profilePicture.altText}
+            <div className={puerhPictures}>
+                <GatsbyImage
+                    className={puerhPicture}
+                    image={image1}
+                    alt={puerh.pictures.picture1.altText}
                 />
-                <h3>{puerh.name}</h3>
-                <div dangerouslySetInnerHTML={{__html: puerh.description}} />
-                <p>Steeping Time: {puerh.steepingTime}</p>
-            </div> */}
+                <GatsbyImage
+                    className={puerhPicture}
+                    image={image2}
+                    alt={puerh.pictures.picture2.altText}
+                />
+                <GatsbyImage
+                    className={puerhPicture}
+                    image={image3}
+                    alt={puerh.pictures.picture3.altText}
+                />
+
+            </div>
+            <div className={puerhDetails}>
+                <h2>Details</h2>
+                <p>
+                    <span className={puerhDetail}><strong>Inweektijd:</strong></span> {puerh.steepingTime}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Weektemperatuur:</strong></span> {puerh.steepingTemperature}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Bladeren Per 500ml 17oz Theepot:</strong></span> {puerh.leavesPer500ml17ozTeapot}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Eetlepels 500ml17Oz:</strong></span> {puerh.tablespoons500ml17Oz}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Oogstjaar:</strong></span> {puerh.harvestYear}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Thee seizoen:</strong></span> {puerh.teaSeason}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Thee Regio:</strong></span> {puerh.teaRegion}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Thee Cafeïne Inhoud:</strong></span> {puerh.teaCaffeineContent}
+                </p>
+                <p>
+                    <span className={puerhDetail}><strong>Glutenvrij:</strong></span> {puerh.glutenFree}
+                </p>
+            </div>
         </Layout>
     )
 }

@@ -117,12 +117,14 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
 }
 
 .puerhHeaderPicture {
+    display: block;
     max-width: 35vw;
     min-width: 330px;
     max-height: 35vw;
     min-height: 330px;
+    object-fit: contain;
     overflow: hidden;
-
+   
 }
 
 .puerhHeaderInfo {
@@ -130,6 +132,7 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     min-width: 330px;
     max-height: 35vw;
     min-height: 330px;
+    margin-left: 25px;
     overflow: hidden;
 }
 
@@ -139,4 +142,48 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     color: #37ba83;
 }
 
+.puerhHeaderInfo >h3 {
+    padding-bottom: 25px;
+    color: #cf9e2a;
+}
 
+.puerhHeaderInfo >h1 {
+    padding: 25px 0;
+}
+
+.puerhDescription {
+    padding: 25px 0;
+    line-height: 1.5;
+}
+
+.puerhPictures {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 55px;
+    padding: 0 5%;
+}
+
+.puerhPicture {
+    width: 21vw;
+    height: 21vw;
+    min-width: 330px;
+    min-height: 330px;
+    border-radius: 9px;
+}
+
+.puerhDetails {
+    margin-top: 55px;
+    padding: 0 11%;
+}
+
+.puerhDetails >h2 {
+    padding: 25px 0;
+}
+
+.puerhDetails >p {
+    margin-top: 15px;
+}
+
+.puerhDetail {
+    color: #cf9e2a;
+}

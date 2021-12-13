@@ -1,16 +1,92 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import { graphql } from 'gatsby'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
-const AboutPage = () => {
+import Layout from '../components/layout'
+import {
+    headerPictureH1,
+    headerPicture,
+    headerTitle,
+    headerDescription,
+    headerDescriptionBtn,
+    CTA,
+    section,
+    puErhs,
+    subtitle,
+    description
+  
+  } from '../page.module.css'
+
+const AboutPage = ({
+    data: {
+        wpPage: {
+            aboutPage: { headerAboutUs, mission }
+        }
+    }
+}) => {
+    const imageHeader = getImage(headerAboutUs.picture.localFile)
+    const imageMission = getImage(mission.bannerPicture.localFile)
     return (
         <Layout>
-            <p>
-                Pu erh tea, also written a pu’er, is a special type of tea that originates from China’s Yunnan province. 
-                This tea category is named after the city of puer. It was around a 1000 years ago when the people and horses carried lots of tea bricks and cakes from pu’er to nearby regions including Bengal, Burma, Tibet and Central China. This trade link is also called the ‘Ancient Tea Route’ or ‘Tea Horse Road’.
-            </p>
+            <div className={headerPictureH1}>
+                <GatsbyImage 
+                    className={headerPicture}
+                    image={imageHeader}
+                />
+            </div>
+            <div className={headerDescription}>
+                <h1>{headerAboutUs.title}</h1>
+                <div 
+                    dangerouslySetInnerHTML={{
+                        __html: headerAboutUs.description
+                    }}
+                />
+            </div>
+            <div>
+                <GatsbyImage 
+                    image={imageMission}
+                />
+                <h2>{mission.title}</h2>
+                <div 
+                    dangerouslySetInnerHTML={{
+                        __html: mission.description
+                    }}
+                />
+            </div>
 
         </Layout>
     )
 }
 
 export default AboutPage
+
+export const query = graphql`
+    query {
+        wpPage(slug: {eq: "about-us"}) {
+            aboutPage {
+                headerAboutUs {
+                    title
+                    description
+                    picture {
+                        localFile {
+                            childImageSharp {
+                                gatsbyImageData(quality: 100)
+                            }
+                        }
+                    }
+                }
+                mission {
+                    title
+                    description
+                    bannerPicture {
+                        localFile {
+                            childImageSharp {
+                                gatsbyImageData(quality: 100)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
