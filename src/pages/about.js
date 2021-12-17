@@ -8,6 +8,8 @@ import {
     headerPicture,
     headerTitle,
     headerDescription,
+    aboutMissionPicture,
+    missionH2,
     headerDescriptionBtn,
     CTA,
     section,
@@ -42,11 +44,12 @@ const AboutPage = ({
                     }}
                 />
             </div>
-            <div>
+            <div className={headerDescription}>
                 <GatsbyImage 
+                    className={aboutMissionPicture}
                     image={imageMission}
                 />
-                <h2>{mission.title}</h2>
+                <h2 className={missionH2}>{mission.title}</h2>
                 <div 
                     dangerouslySetInnerHTML={{
                         __html: mission.description
