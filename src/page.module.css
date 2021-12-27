@@ -195,3 +195,35 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
 .missionH2 {
     margin: 25px 0;
 }
+
+/* --------- contact us ---------- */
+
+.socials {
+    display: flex;
+    align-items: center;
+    margin-top: .55rem;
+}
+
+.facebook,
+.linkedin {
+    width: 30px;
+    height: 30px;
+    margin-left: 1.1rem;
+    background-size: 30px 30px;
+    transition: transform .3 ease;
+    opacity: 1;
+}
+
+.facebook:hover,
+.linkedin:hover {
+    opacity: .55;
+}
+
+.facebook {
+    background-image: url("images/facebook.svg");
+}
+
+.linkedin {
+    background-image: url("images/linkedin-logo-svgrepo-com.svg");
+    filter: invert(100%);
+}

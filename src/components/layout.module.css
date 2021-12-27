@@ -39,15 +39,8 @@ body {
     margin-right: auto;
 }
 
-.siteTitle::after {
-    content:'.';
-    position: absolute;
-    right: -5px;
-    bottom: 35px;
-    font-size: 2rem;
-    font-family: serif;
-    color: #37BA83;
-    margin-right: auto;
+.siteTitleSpan {
+    color: #b9531e;
 }
 
 .nav {

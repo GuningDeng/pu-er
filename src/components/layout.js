@@ -5,6 +5,7 @@ import {
     container,
     nav,
     siteTitle,
+    siteTitleSpan,
     navLinks,
     navLinkItem,
     navLinkText
@@ -41,7 +42,7 @@ const Layout = ({ children }) => {
             <title>{data.site.siteMetadata.title}</title>
             <nav className={nav}>
                 <header className={siteTitle}>
-                    {data.site.siteMetadata.title}
+                    {data.site.siteMetadata.title}<span className={siteTitleSpan}>*</span>
                 </header>
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
