@@ -11,19 +11,7 @@ import {
     puerhPictures,
     puerhPicture,
     puerhDetails,
-    puerhDetail,
-    headerPictureH1,
-    headerPicture,
-    headerTitle,
-    headerDescription,
-    headerDescriptionBtn,
-    CTA,
-    section,
-    puErhs,
-    puerthsTitleH2,
-    subtitle,
-    description
-
+    puerhDetail
 } from '../../page.module.css'
 
 const PuerhPage = ({

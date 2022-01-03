@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
 import Layout from '../../components/layout'
@@ -7,16 +7,11 @@ import Puerh from '../../components/puerh'
 import {
     headerPictureH1,
     headerPicture,
-    headerTitle,
     headerDescription,
-    headerDescriptionBtn,
-    CTA,
     section,
     puErhs,
     puerthsTitleH2,
-    subtitle,
-    description
-  
+    subtitle
   } from '../../page.module.css'
 
 const PuerhsPage = ({
@@ -59,18 +54,6 @@ const PuerhsPage = ({
                     </div>
                 </div>
             </div>
-            {/* {
-                edges.map((item) => {
-                    const puerh = item.node.puerhMeta
-                    const slug = item.node.slug
-                    return (
-                        <Link to={`/puerhs/${slug}`}>
-                            <p key={item.node.id}>{puerh.name}.</p>
-                        </Link>
-                    )
-                })
-            } */}
-
         </Layout>
     )
 }

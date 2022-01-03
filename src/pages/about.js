@@ -6,17 +6,9 @@ import Layout from '../components/layout'
 import {
     headerPictureH1,
     headerPicture,
-    headerTitle,
     headerDescription,
     aboutMissionPicture,
-    missionH2,
-    headerDescriptionBtn,
-    CTA,
-    section,
-    puErhs,
-    subtitle,
-    description
-  
+    missionH2
   } from '../page.module.css'
 
 const AboutPage = ({
