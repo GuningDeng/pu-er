@@ -1,6 +1,6 @@
 import * as React from "react"
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Puerh from "../components/puerh"
 import Layout from '../components/layout'
@@ -44,7 +44,7 @@ const IndexPage = ({
             }}
           />
           <div className={headerDescriptionBtn}>
-            <a target="_blank" href={homePage.callToAction.link} className={CTA}>
+            <a target="_blank" href={homePage.callToAction.link} className={CTA} rel="noreferrer">
               {homePage.callToAction.linkText}
             </a>
           </div>

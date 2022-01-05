@@ -43,10 +43,10 @@ const contactPage = ({
                     <p><span><strong>Adres: </strong></span>{`${companyInformation.address} ${companyInformation.postcode}  ${companyInformation.city}`}</p>
                     <div className={socials}>
                         Volg ons:
-                        <a className={facebook} target="_blank" href={companyInformation.socials.facebook}>
+                        <a className={facebook} target="_blank" href={companyInformation.socials.facebook} rel="noreferrer">
                             {" "}
                         </a>
-                        <a className={linkedin} target="_blank" href={companyInformation.socials.linkedin}>
+                        <a className={linkedin} target="_blank" href={companyInformation.socials.linkedin} rel="noreferrer">
                             {" "}
                         </a>
                     </div>
