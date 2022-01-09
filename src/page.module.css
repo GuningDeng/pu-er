@@ -60,7 +60,6 @@ repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63
     rgba(143, 77, 63, 0.09) 10px),
 repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.09) 5px,
     rgba(143, 77, 63, 0.09) 10px);
-    border-top: 2px solid #791211;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -81,7 +80,7 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     position: relative;
     margin-top: 85px;
     padding: 0 15%;
-    text-align: center;
+    text-align: left;
 }
 
 .subtitle {
@@ -91,6 +90,7 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
     /* letter-spacing:  -0.35rem; */
     text-transform: uppercase;
     color: #e2e2e2;
+    text-align: center;
 }
 
 .description {
@@ -153,6 +153,41 @@ repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63,
 
 .puerhHeaderInfo >h1 {
     padding: 25px 0;
+}
+
+.buyBtn {
+    display: block;
+    width: 50%;
+    margin-top: 21px;
+    padding: 15px 20px;
+    /* margin-right: auto; */
+    background-color: #5c1311;
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 50px,
+    rgba(255, 127, 0, 0.09) 50px, rgba(255, 127, 0, 0.09) 56px, transparent 56px, transparent 63px,
+    rgba(255, 127, 0, 0.09) 63px, rgba(255, 127, 0, 0.09) 69px, transparent 69px, transparent 116px,
+    rgba(255, 206, 0, 0.09) 116px, rgba(255, 206, 0, 0.09) 166px),
+repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.09) 50px,
+    rgba(255, 127, 0, 0.09) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.09) 63px,
+    rgba(255, 127, 0, 0.09) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.09) 116px,
+    rgba(255, 206, 0, 0.09) 166px),
+repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.09) 5px,
+    rgba(143, 77, 63, 0.09) 10px),
+repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.09) 5px,
+    rgba(143, 77, 63, 0.09) 10px);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.buyBtn:hover {
+    color: #d32a28;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #d32a28;
+    font-weight: normal;
 }
 
 .puerhDescription {

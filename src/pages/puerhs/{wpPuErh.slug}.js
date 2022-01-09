@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../../components/layout"
@@ -11,7 +11,8 @@ import {
     puerhPictures,
     puerhPicture,
     puerhDetails,
-    puerhDetail
+    puerhDetail,
+    buyBtn
 } from '../../page.module.css'
 
 const PuerhPage = ({
@@ -57,6 +58,9 @@ const PuerhPage = ({
                     <p>
                         <span>Gewicht:</span> <strong>{puerh.weight}</strong>
                     </p>
+                    <div>
+                        <Link className={buyBtn} to="/puerhs">Bestel NU</Link>
+                    </div>
                     <div
                         className={puerhDescription}
                         dangerouslySetInnerHTML={{ __html: puerh.description }}

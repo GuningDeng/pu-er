@@ -9,7 +9,6 @@ import {
 } from "./footer.module.css"
 
 const Footer = ({ siteTitle, companyInfo }) => {
-
     return (
         <div className={wrapper}>
             <div>
@@ -24,13 +23,15 @@ const Footer = ({ siteTitle, companyInfo }) => {
                     <a
                         className={facebook} 
                         target="_blank"
+                        rel="noreferrer"
                         href={companyInfo.socials.facebook}
-                    />
+                    >{" "}</a>
                     <a 
                         className={linkedin}
                         target="_blank"
+                        rel="noreferrer"
                         href={companyInfo.socials.linkedin}
-                    />
+                    >{" "}</a>
 
                 </div>
             </div>

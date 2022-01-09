@@ -1,6 +1,6 @@
 import * as React from "react"
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Puerh from "../components/puerh"
 import Layout from '../components/layout'
@@ -44,15 +44,18 @@ const IndexPage = ({
             }}
           />
           <div className={headerDescriptionBtn}>
-            <a target="_blank" href={homePage.callToAction.link} className={CTA} rel="noreferrer">
-              {homePage.callToAction.linkText}
-            </a>
+            <Link className={CTA} to="/puerhs">Boek Pu Erhs</Link>
           </div>
         </div>
       </div>
       <div className={section}>
         <h2 className={subtitle}>{homePage.featuredPuErhs.title}</h2>
-        <p className={description}>{homePage.featuredPuErhs.description}</p>
+        <div
+            className={description}
+            dangerouslySetInnerHTML={{
+              __html: homePage.featuredPuErhs.description,
+            }}
+          />
         <div className={puErhs}>
           {
             homePage.featuredPuErhs.puErhs.map(puErh => (
